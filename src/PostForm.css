@@ -19,3 +19,10 @@ form{
   padding: 15px;
   
   }
+
+
+
+.text{
+  display: flex;
+  justify-content: space-between;
+}
