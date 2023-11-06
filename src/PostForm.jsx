@@ -19,6 +19,7 @@ const handleTextCharacterChange =(event)=>{
       <textarea
         value={thoughtValue}
         onChange={handleTextCharacterChange}
+        placeholder="I'll be back - Terminator"
         rows={4}
         cols={70}
       /><div className='text'>
@@ -26,7 +27,7 @@ const handleTextCharacterChange =(event)=>{
       <p className='remaining-character'>{remainingCharacters}</p>
       
       </div>
-      <button className='happy-button'>♥ Send happy thought ♥</button>
+      <button className='happy-button'>❤️ Send happy thought ❤️</button>
     </form>
   )
 }

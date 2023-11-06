@@ -5,3 +5,9 @@
   -webkit-text-fill-color: transparent;
 
 }
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 1rem;
+  }
+}

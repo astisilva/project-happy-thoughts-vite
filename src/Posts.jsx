@@ -8,27 +8,26 @@ export const Posts = () => {
   const [thoughts, setThoughts] = useState('')
   const [postList, setPostList] = useState([])
   const [textMessage, setTextMessage] = useState('')
+ 
 
   const url = 'https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts'
 
 
   const fetchPosts = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
-      const response = await fetch(url)
+      const response = await fetch(url);
       if (response.ok) {
-        const data = await response.json()
-        console.log('data', data)
-        setPostList(data)
+        const data = await response.json();
+        setPostList(data);
       }
     } catch (error) {
-      console.error(error)
-
+      console.error(error);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
-
+  };
+  
 
   const handleNewThoughtChange = (event) => {
     setThoughts(event.target.value);
@@ -38,11 +37,7 @@ export const Posts = () => {
 
   const handleSubmitForm = async (event) => {
     event.preventDefault()
-
-
-    console.log('Thoughts length:', thoughts.length);
-
-
+    
     if (!thoughts) {
       setTextMessage(`You have to write something`)
     } else if (thoughts.length < 5) {
@@ -51,11 +46,7 @@ export const Posts = () => {
       setTextMessage(`Your message is too long`)
     }
 
-
-
-    console.log('Request Payload:', JSON.stringify({ description: thoughts }));
-
-
+   
     const options = {
       method: 'POST',
       headers: {
@@ -64,14 +55,13 @@ export const Posts = () => {
       body: JSON.stringify({
         message: thoughts,
       }),
-
     };
-
 
     try {
       const response = await fetch(url, options);
       if (response.ok) {
         await fetchPosts();
+        setThoughts('')
       } else {
         const errorMessage = await response.text();
         console.error(`Failed to create the thought. Server response: ${errorMessage}`);
@@ -106,9 +96,12 @@ export const Posts = () => {
   }
 
 
+
+
   useEffect(() => {
     fetchPosts();
-  }, [setTextMessage]);
+    
+  }, []);
 
   return (
     <div>
@@ -119,11 +112,10 @@ export const Posts = () => {
         textMessage={textMessage} />
 
       <PostList
-        loading={loading}
-        postList={postList}
-        setPostList={setPostList}
-        onLike={handleLike}
-
+         postList={postList}
+         setLoading={setLoading}
+         onLike={handleLike}       
+        
       />
     </div>
   )
