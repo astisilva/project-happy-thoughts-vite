@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { PostForm } from './PostForm'
 import { PostList } from './PostList'
+import { Header } from "../components/Header";
 
 export const Posts = () => {
 
@@ -8,7 +9,7 @@ export const Posts = () => {
   const [thoughts, setThoughts] = useState('')
   const [postList, setPostList] = useState([])
   const [textMessage, setTextMessage] = useState('')
- 
+
 
   const url = 'https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts'
 
@@ -27,7 +28,7 @@ export const Posts = () => {
       setLoading(false);
     }
   };
-  
+
 
   const handleNewThoughtChange = (event) => {
     setThoughts(event.target.value);
@@ -37,7 +38,7 @@ export const Posts = () => {
 
   const handleSubmitForm = async (event) => {
     event.preventDefault()
-    
+
     if (!thoughts) {
       setTextMessage(`You have to write something`)
     } else if (thoughts.length < 5) {
@@ -46,7 +47,7 @@ export const Posts = () => {
       setTextMessage(`Your message is too long`)
     }
 
-   
+
     const options = {
       method: 'POST',
       headers: {
@@ -100,11 +101,12 @@ export const Posts = () => {
 
   useEffect(() => {
     fetchPosts();
-    
+
   }, []);
 
   return (
     <div>
+        <Header />
       <PostForm
         thoughtValue={thoughts}
         newThoughtChange={handleNewThoughtChange}
@@ -112,10 +114,10 @@ export const Posts = () => {
         textMessage={textMessage} />
 
       <PostList
-         postList={postList}
-         setLoading={setLoading}
-         onLike={handleLike}       
-        
+        postList={postList}
+        setLoading={setLoading}
+        onLike={handleLike}
+
       />
     </div>
   )

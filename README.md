@@ -9,6 +9,7 @@
 In this week's project, you'll be able to practice your React state skills by fetching and posting data to an API.
 
 ## Getting Started with the Project
+I started by sketching, to easier see what was needed to be done.
 
 ### Dependency Installation & Startup Development Server
 
@@ -23,6 +24,8 @@ npm i && code . && npm run dev
 ### The Problem
 
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+
+I started by looking at the sketch I made to see what was neede to be done, and with help from the lessons I started to build the project bit by bit. I had som issues which I googled.
 
 ### View it live
 

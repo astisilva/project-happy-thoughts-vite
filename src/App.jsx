@@ -1,10 +1,9 @@
-import { Posts } from "./Posts";
-import { Header } from "./Header";
+import { Posts } from "./components/Posts";
 import './App.css'
 
 export const App = () => {
   return <div className="posts">
-    <Header />
+  
     <Posts />
   </div>;
 };

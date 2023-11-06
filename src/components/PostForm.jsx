@@ -1,5 +1,5 @@
 import {React, useState }from 'react'
-import './PostForm.css'
+import '../styles/PostForm.css'
 
 export const PostForm = ({ thoughtValue, newThoughtChange, onSubmitForm, textMessage }) => {
 

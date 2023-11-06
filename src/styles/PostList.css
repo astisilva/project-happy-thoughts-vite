@@ -59,6 +59,7 @@
 	.list {
 		padding: 5px;
 		margin-top: 15px;
+		margin:auto;
 	}
 
 	.info {
@@ -74,11 +75,3 @@
 	}
 }
 
-@media only screen and (max-width: 800px) {
-  .list {
-    padding: 5px;
-    margin-top: 15px;
-    justify-content: center;
-  }}
-
-	

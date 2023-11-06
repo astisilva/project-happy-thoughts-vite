@@ -1,5 +1,5 @@
 import { React, useState } from 'react'
-import './PostList.css'
+import '../styles/PostList.css'
 
 export const PostList = ({setLoading,  postList, onLike}) => {
 
