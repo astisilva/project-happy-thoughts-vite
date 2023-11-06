@@ -9,7 +9,7 @@
 In this week's project, you'll be able to practice your React state skills by fetching and posting data to an API.
 
 ## Getting Started with the Project
-I started by sketching, to easier see what was needed to be done.
+I started by sketching, to easier see what I needed to do.
 
 ### Dependency Installation & Startup Development Server
 
@@ -23,13 +23,10 @@ npm i && code . && npm run dev
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-I started by looking at the sketch I made to see what was neede to be done, and with help from the lessons I started to build the project bit by bit. I had som issues which I googled.
-
+- I started by looking at the sketch I made to see what was needed to be done, and with help from the lessons I started to build the project bit by bit. I had som issues which I googled to be able to solve the problem. In this project I used React features such as useState, useEffect, and the Fetch API for dynamic and responsive functionality.
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://tubular-gaufre-8313a0.netlify.app
 
 ## Instructions
 
